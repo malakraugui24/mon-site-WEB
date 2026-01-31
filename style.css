@@ -1,0 +1,223 @@
+*{
+box-sizing: border-box;
+}
+
+
+/* nom prenom : malak raugui 
+code apogee : 24007321*/ 
+
+.carte h1 {
+    
+    
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    width: 100%;
+    
+
+}
+
+
+
+
+
+
+body{
+   margin: 0;
+   padding: 20px;
+   font-family: Arial, sans-serif;
+   background:  linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+   color:#000000; 
+
+}
+
+.conteneur{
+  max-width: 950px;
+ margin:auto ; 
+
+
+}
+
+.entete{
+
+    margin-bottom: 14px;
+
+}
+
+.sousTitre{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 6px;
+  color: #080a0d;
+}
+.carte{
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.formulaire .grille{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.champ label{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.champ input, .champ select{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d5d7de;
+  border-radius: 10px;
+  outline: none;
+}
+
+.champ input:focus, .champ select:focus{
+  border-color: #7a7cff;
+}
+.erreur{
+  color: #ff4d4f;
+  font-size: 12px;
+}
+.LesBouttons{
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+
+.boutonPrincipal {
+    background-color: #5dacac; 
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;   
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btnEffacer, .btnSupprimerCahier {
+    background-color: #ff7675;
+    color: white;
+    border: none;        
+    padding: 10px 14px;
+    border-radius: 10px;     
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+.barreHaut{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+#recherche{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d5d7de;
+  border-radius: 10px;
+  outline: none;
+}
+.zoneStatistiques{
+  min-width: 280px;
+  background: #f0f3ff;
+  border: 1px solid #dfe6ff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.cadreTableau{
+  overflow-x: auto;
+}
+.tableau{
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tableau thead{
+  background: #111827;
+  color: white;
+}
+
+.tableau th, .tableau td{
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+@media (max-width: 900px){
+  .formulaire .grille{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px){
+  .formulaire .grille{
+    grid-template-columns: 1fr;
+  }
+  .barreHaut{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .zoneStatistiques{
+    min-width: auto;
+  }
+}
+
+
+section.carte {
+    margin-top: 20px !important; 
+    margin-bottom: 40px !important;
+}
+
+
+
+.champ textarea{
+  width : 100% ;
+  padding : 10px  ;
+  border  : 1px solid #d5d7de;
+  border-radius: 10px;
+  outline:   none;
+  resize:  vertical;
+  font-family:  Arial ,  sans-serif;
+}
+
+.champ textarea:focus{
+  border-color: #7a7cff;
+}
+
+
+.btnSupprimerCahier{
+  border: none;
+  padding: 7px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #111827;
+  color: white;
+}
+  .cah{
+    text-align:center ; 
+  }
