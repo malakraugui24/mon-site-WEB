@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+   <meta name="author" content="Malak Raugui ">
+<meta name="description" content="Application web de gestion des présences et absences.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systeme de présence</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+    
+
+</head>
+<body>
+    <main class="conteneur">
+      
+
+  
+  
+  
+
+        
+    <section class="carte">
+
+        <h1>Gestion de Présence</h1>
+<p class="sousTitre "> Ajouter, rechercher et suivre les présences/absences.</p>
+
+<h2>Saisir une présence</h2>
+<form id="formPresence" class="formulaire "   autocomplete="off">   
+
+<div class="grille"> 
+    <div class="champ">
+ <label for="cne">CNE</label>
+ <input type="text" id="cne"  placeholder="Exemple:AE1234"/>
+<small class="erreur "  id="erreurCne"></small>
+
+
+    </div>
+
+
+    <div class="champ">
+<label for="nom">Nom</label>
+<input type="text" id="nom" placeholder="Ex:El Alaoui "/> 
+ <small class="erreur" id="erreurNom"></small>
+
+
+
+
+    </div>
+
+         <div class="champ">
+          <label for="datePresence">Date</label>
+      <input type="date" id="datePresence" />
+    <small class="erreur" id="erreurDate"></small>
+          </div>
+          
+
+
+          <div  class="champ">
+    <label for="statut">Statut</label>
+<select id="statut">
+ <option value="present">Présent</option>
+<option value="absent">Absent</option>
+
+ </select>
+
+
+          </div>
+
+ </div>
+
+ <div class="LesBouttons">
+    <button type="submit" class="boutonPrincipal ">Ajouter</button>
+<button type="button" id="btnToutEffacer" class="btnEffacer">Tout effacer</button> 
+
+
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+</form>
+
+
+</section>
+
+       
+<div class="barreHaut">
+        <div class="blocRecherche">
+   <label for="recherche" class="labelCache">Recherche</label>
+      <input type="text" id="recherche" placeholder="chercher par CNE ou Nom..." />
+   
+   
+ </div>
+
+    <div class="zoneStatistiques" id="zoneStatistiques" ></div>
+</div>
+  <div class="cadreTableau">
+    <table class="tableau">
+      <thead>
+        <tr>
+          <th>CNE</th>
+          <th>Nom</th>
+          <th>Date</th>
+          <th>Statut</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="corpsTableau"></tbody>
+    </table>
+  </div>
+</section>
+
+
+<div style="height: 60px;"></div>
+
+
+    
+
+
+
+
+
+          <section class="carte">
+            <div  class= "cah"> <h1>Cahier de Texte</h1>
+     </div>
+       <p  class= "sousTitre"> Ajouter une séance, consulter l'historique et supprimer </p>
+ 
+  <form   id="formCahier"   class="formulaire"  autocomplete="off">
+    <div   class="grille">
+  <div class="champ">
+      <label for="dateSeance">  Date</label>
+    <input type="date"    id="dateSeance" />
+          <small class="erreur" id="erreurDateSeance"></small>
+      </div>
+
+  <div class="champ">
+      <label for="moduleSeance">Module</label>
+  <input type="text" id="moduleSeance" placeholder="Ex: Programmation Web" />
+          <small class="erreur" id="erreurModuleSeance"></small>
+      </div>
+
+  <div class="champ" style="grid-column: 1 / -1;">
+        <label for="contenuSeance">Contenu / Devoir</label>
+    <textarea id="contenuSeance"     rows="4"   placeholder="Résumé du cours + devoir..."></textarea>
+        <small class="erreur" id="erreurContenuSeance"></small>
+                                         </div>
+    </div>
+
+    <div class="LesBouttons">
+  <button type="submit" class="boutonPrincipal">Ajouter la séance</button>  
+  <button type="button" id="btnEffacerCahier" class="btnEffacer">Tout effacer</button>
+    </div>
+  </form>
+
+  <div class="barreHaut" style="margin-top: 12px;">
+    <div class="blocRecherche"> 
+             <label for="rechercheCahier" class="labelCache">Recherche cahier</label>
+        <input type="text" id="rechercheCahier" placeholder="Chercher par module ou contenu..." />
+    </div>
+    <div class="zoneStatistiques" id="statsCahier"></div>
+  </div>
+
+  <div class="cadreTableau">
+<table class="tableau">
+      <thead>
+        <tr>
+       <th>Date</th>
+    <th>Module</th>
+              <th>Contenu</th>
+          <th>Action</th>
+            </tr>
+          </thead>
+<tbody id="corpsCahier"></tbody>
+</table>
+  </div>
+        </section>
+</main>
+<script src="script.js"></script>
+</body>
+
+        
+</html>
